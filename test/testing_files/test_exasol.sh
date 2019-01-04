@@ -5,9 +5,9 @@ echo $MY_MESSAGE
 set -e
 
 #setting up an exasol db image in docker
-docker pull exasol/docker-db:latest
-# to run locally : docker run --name exasoldb -p 8877:8888 --detach --privileged --stop-timeout 120  exasol/docker-db:latest
-docker run --name exasoldb2 -p 127.0.0.1:8877:8888 --detach --privileged --stop-timeout 120  exasol/docker-db:latest
+docker pull exasol/docker-db:6.0.13
+# to run locally : docker run --name exasoldb -p 8877:8888 --detach --privileged --stop-timeout 120  exasol/docker-db:6.0.13
+docker run --name exasoldb2 -p 127.0.0.1:8877:8888 --detach --privileged --stop-timeout 120  exasol/docker-db:6.0.13
 
 # Wait until database is ready
 (docker logs -f --tail 0 exasoldb2 &) 2>&1 | grep -q -i 'stage4: All stages finished'
