@@ -2,6 +2,7 @@
 MY_MESSAGE="Starting test DB2!"
 echo $MY_MESSAGE
 
+set -x
 set -e
 
 curl -L $DB2_PATH -o db2.tar.gz

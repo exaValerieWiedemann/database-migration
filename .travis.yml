@@ -68,9 +68,9 @@ install:
     
 script: 
     - ./test/testing_files/mock_test.sh
+    - ./test/testing_files/test_db2.sh
     - ./test/testing_files/test_exasol.sh
     - ./test/testing_files/test_mysql.sh
     - ./test/testing_files/test_sqlserver.sh
     - ./test/testing_files/test_postgres.sh
-    - ./test/testing_files/test_db2.sh
     - ./test/testing_files/test_oracle.sh
